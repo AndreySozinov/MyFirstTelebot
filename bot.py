@@ -2,6 +2,7 @@ from random import randint
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes, MessageHandler, filters
 from bot_commands import *
+from weather import *
 import TOKEN
 
 async def roshambo_command(update: Update, context: ContextTypes):
@@ -26,7 +27,8 @@ app.add_handler(CommandHandler("time", time_command))
 app.add_handler(CommandHandler("help", help_command))
 app.add_handler(CommandHandler("sum", sum_command))
 app.add_handler(CommandHandler("roshambo", roshambo_command))
-app.add_handler(MessageHandler(filters.TEXT, roshambo_game))
+#app.add_handler(MessageHandler(filters.TEXT, roshambo_game))
+app.add_handler(CommandHandler("weather", weather_command))
 
 
 print('server start')
