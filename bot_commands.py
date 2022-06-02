@@ -7,7 +7,7 @@ async def hi_command(update: Update, context: ContextTypes):
     await update.message.reply_text(f'Hello {update.effective_user.first_name}')
 
 async def help_command(update: Update, context: ContextTypes):
-    await update.message.reply_text(f'/hi\n/time\n/sum\n/help\n/roshambo')
+    await update.message.reply_text(f'/hi\n/time\n/sum\n/help\n/roshambo\n/weather')
 
 async def time_command(update: Update, context: ContextTypes):
     await update.message.reply_text(f'{datetime.datetime.now().time()}')
